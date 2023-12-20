@@ -114,6 +114,7 @@ btnEl.addEventListener("click", (e) => {
         inputsEl[2].style.border = "1px solid red";
         inputsEl[2].style.backgroundColor = "#ff53531c";
         labellingEls[2].style.color = "red";
+        years.innerHTML = "- -";
         hasError = true;
         empty = false;
         errorMessageEL[2].innerHTML = 'must be in the past'} else {
