@@ -58,6 +58,7 @@ btnEl.addEventListener("click", (e) => {
         hasError = true;
         empty = false;
         errorMessageEL[0].innerHTML = 'Must be a valid day'} else {
+        labellingEls[0].style.color = "#bcbcbc";
         errorMessageEL[0].style.visibility = "hidden";
         errorMessageEL[0].style.opacity = 0;
         inputsEl[0].style.border = "1px solid #bcbcbc";
@@ -66,6 +67,7 @@ btnEl.addEventListener("click", (e) => {
         hasError = true;
         days.innerHTML = Math.abs(currrentDate - inputsEl[0].value);
         days.style.opacity = 1.5;
+        inputsEl[0].value = ''
     }
 
     // error for months
@@ -88,6 +90,7 @@ btnEl.addEventListener("click", (e) => {
         hasError = true;
         empty = false;
         errorMessageEL[1].innerHTML = 'Must be a valid month'} else {
+        labellingEls[1].style.color = "#bcbcbc";
         errorMessageEL[1].style.visibility = "hidden";
         errorMessageEL[1].style.opacity = 0;
         inputsEl[1].style.border = "1px solid #bcbcbc";
@@ -96,6 +99,7 @@ btnEl.addEventListener("click", (e) => {
         hasError = true;
         months.innerHTML = currentMonth - inputsEl[1].value;
         months.style.opacity = 1;
+        inputsEl[1].value = '';
     }
 
     // error for years
@@ -114,10 +118,11 @@ btnEl.addEventListener("click", (e) => {
         inputsEl[2].style.border = "1px solid red";
         inputsEl[2].style.backgroundColor = "#ff53531c";
         labellingEls[2].style.color = "red";
-        years.innerHTML = "- -";
         hasError = true;
+        years.innerHTML = "- -";
         empty = false;
         errorMessageEL[2].innerHTML = 'must be in the past'} else {
+        labellingEls[2].style.color = "#bcbcbc";
         errorMessageEL[2].style.visibility = "hidden";
         errorMessageEL[2].style.opacity = 0;
         inputsEl[2].style.border = "1px solid #bcbcbc";
@@ -126,6 +131,7 @@ btnEl.addEventListener("click", (e) => {
         hasError = true;
         years.innerHTML = currentYear - inputsEl[2].value;
         years.style.opacity = 1;
+        inputsEl[2].value = '';
     }
 
     // error februrary
