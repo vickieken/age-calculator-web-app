@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  </style>
+</head>
+<body>
+  
+  <main>
+    <div class="wrapper">
+      <div class="container">
+        <section id="form_section">
+          <form action="/" class="form">
+            <div class="form_list">
+              <label for="input">
+                <p class="labelling">Day</p>
+              </label>
+              <input type="number" name="input" id="input" placeholder="DD" maxlength="2" minlength="2" class="inputDay">
+              <div class="error_message hidden error_day" style="color: red; font-size: 8px;">This field is required</div>
+            </div>
+            <div class="form_list">
+              <label for="input">
+                <p class="labelling">Month</p>
+              </label>
+              <input type="number" name="input" id="input" placeholder="MM" maxlength="2" minlength="2" class="inputMonth">
+              <div class="error_message hidden error_month" style="color: red; font-size: 8px;">This field is required</div>
+            </div>
+            <div class="form_list">
+              <label for="input">
+                <p class="labelling">Year</p>
+              </label>
+              <input type="number" name="input" placeholder="YYYY" maxlength="4" minlength="4" id="input" class="inputYear">
+              <div class="error_message hidden error_year" style="color: red; font-size: 8px;">This field is required</div>
+            </div>
+          </form>
+        </section>
+    
+        <section id="button_section">
+            <div class="line">
+              <hr style="color: gray;">
+            </div>
+            <div class="icon">
+              <img src="./assets/images/icon-arrow.svg" class="btn" alt="arrow down" style="background-color: hsl(259, 100%, 65%); border-radius: 50%; padding: 10px; width: 50px; height: 50px;">
+            </div>
+        </section>
+    
+        <section id="ans_section">
+          <p class="years"><span id="years-ans">- -</span>years</p>
+          <p class="months"><span id="months-ans">- -</span>months</p>
+          <p class="days"><span id="days-ans">- -</span>days</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days
+   -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
